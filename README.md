@@ -1,0 +1,2 @@
+# honestmining
+for test
