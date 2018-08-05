@@ -73,6 +73,7 @@
 
         <main class="py-4">
             <div class="row">
+                @auth
                 <div class="col-md-3">
                     <div class="container">
                         <div class="card">
@@ -90,6 +91,9 @@
                 <div class="col-md-9">
                     @yield('content')
                 </div>
+                @else
+                    @yield('content')
+                @endauth
             </div>
         </main>
     </div>
