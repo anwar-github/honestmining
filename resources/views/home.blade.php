@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+
     <div class="row">
         <div class="col-md-12">
             {{--<div class="card">--}}
@@ -44,7 +45,7 @@
                                 {{ number_format($data->getTotal()) }}
                             </td>
                             <td>
-                                {{ 0 }}
+                                {{ number_format($data->amount) }}
                             </td>
                             <td>
                                 <a href="{{ url('/give-create') .'/'. $data->getId() }}" class="btn btn-link">bantu</a>

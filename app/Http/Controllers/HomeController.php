@@ -55,10 +55,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $request = $this->requestService->getRequestWithPaginate();
-
         return view('home', [
-            'data'  => $request
+            'data'  => $this->giveService->getApprovedDone($this->requestService->getAll(), false)
         ]);
     }
 

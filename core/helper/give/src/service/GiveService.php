@@ -60,9 +60,10 @@ class GiveService
 
     /**
      * @param $request
+     * @param bool $isDone
      * @return array
      */
-    public function getApprovedDone($request)
+    public function getApprovedDone($request, $isDone = true)
     {
         $data = [];
         /**
@@ -72,7 +73,11 @@ class GiveService
 
             $total = $this->getTotalGived($value);
 
-            if ($value->getTotal() <= $total->amount) {
+            if ($value->getTotal() <= $total->amount && $isDone == true) {
+
+                $data[] = $total;
+
+            } elseif ($isDone == false && $value->getTotal() >= $total->amount) {
 
                 $data[] = $total;
 
