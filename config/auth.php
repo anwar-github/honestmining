@@ -102,10 +102,12 @@ return [
 //            'expire' => 60,
 //        ],
 //    ],
-    'user_giver' => [
-        'provider' => 'user_giver',
-        'table' => 'password_resets',
-        'expire' => 60,
+    'passwords' => [
+        'user_giver' => [
+            'provider' => 'user_giver',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ]
     ],
 
 ];
