@@ -4,4 +4,5 @@
 3. set database connection
 4. migration (php artisan migrate)
    update table for blance and remember_token (login)
-5. run
+5. composer dump-autoload
+6. php artisan clear-compiled
